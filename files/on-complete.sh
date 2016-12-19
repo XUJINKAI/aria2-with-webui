@@ -1,2 +1,5 @@
 #!/bin/sh
-mv "$3" /data
+if [ $2 -eq 1 ]; then
+	mv "$3" /data
+fi
+echo [$(date)] $2, $3, $1 >> /data/[[on-complete]].log
