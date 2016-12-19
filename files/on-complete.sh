@@ -1,2 +1,2 @@
 #!/bin/sh
-mv $3 /data
+mv "$3" /data
