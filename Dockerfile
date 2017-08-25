@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:edge
 
 MAINTAINER xujinkai <jack777@xujinkai.net>
 
@@ -10,8 +10,10 @@ RUN apk update && \
 	apk add --no-cache --update aria2 && \
 	apk add git && \
 	git clone https://github.com/ziahamza/webui-aria2 /aria2-webui && \
+    rm /aria2-webui/.git* -rf && \
+    apk del git && \
 	apk add --update darkhttpd
-	
+
 ADD files/start.sh /conf-copy/start.sh
 ADD files/aria2.conf /conf-copy/aria2.conf
 ADD files/on-complete.sh /conf-copy/on-complete.sh
