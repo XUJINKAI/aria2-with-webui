@@ -1,6 +1,6 @@
 Aria2 with webui
 ---
-Only 58Mb.  
+Only 29Mb.  
 Edit config file out of the image.  
 Move file completed to another folder.  
 (Tasks that contains more than one files will not be moved.)  
@@ -29,6 +29,3 @@ https://github.com/aria2/aria2
 https://github.com/ziahamza/webui-aria2  
 
 https://github.com/acgotaku/BaiduExporter  
-
-
-#### Any questions please let me know.
