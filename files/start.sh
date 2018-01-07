@@ -9,6 +9,15 @@ if [ ! -f /conf/on-complete.sh ]; then
 	cp /conf-copy/on-complete.sh /conf/on-complete.sh
 fi
 
+if [ ! -f /data/completed ]; then
+    mkdir -p /data/completed
+fi
+
+if [ ! -f /data/download ]; then
+    mkdir -p /data/download
+fi
+
+
 chmod +x /conf/on-complete.sh
 touch /conf/aria2.session
 

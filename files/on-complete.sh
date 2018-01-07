@@ -4,7 +4,7 @@
 # $2 is the number of files.
 # $3 is the path of the first file.
 
-DOWNLOAD=/data/_dl       # no trailing slash!
+DOWNLOAD=/data/download  # no trailing slash!
 COMPLETE=/data/completed # no trailing slash!
 LOG=/data/mvcompleted.log
 SRC=$3
