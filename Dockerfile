@@ -4,6 +4,7 @@ MAINTAINER xujinkai <jack777@xujinkai.net>
 
 RUN apk update && \
 	apk add --no-cache --update bash && \
+	apk add --no-cache --update coreutils && \
 	mkdir -p /conf && \
 	mkdir -p /conf-copy && \
 	mkdir -p /data && \
