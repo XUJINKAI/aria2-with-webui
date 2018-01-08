@@ -2,8 +2,10 @@ Aria2 with webui
 ---
 Only 29Mb.  
 Edit config file out of the image.  
-Move file completed to another folder.  
-(Tasks that contains more than one files will not be moved.)  
+while the download completed,
+1. Move file(s) completed to /data/completed include the directory structure.
+2. remove the *.aria2 control files.
+3. remove the empty directory in.
 
 ### Install
 I. replace **/DOWNLOAD_DIR** and **/CONFIG_DIR** for save data, and **YOUR_SECRET_CODE** for security. Run command below  
