@@ -6,6 +6,7 @@ RUN apk update && \
     	apk upgrade && \
 	apk add bash && \
 	apk add coreutils && \
+	apk add su-exec && \
 	mkdir -p /conf && \
 	mkdir -p /conf-copy && \
 	mkdir -p /data && \

@@ -21,6 +21,19 @@ fi
 chmod +x /conf/on-complete.sh
 touch /conf/aria2.session
 
+userid=65534
+groupid=65534
+
+if [ $PUID ]; then
+    userid=$PUID
+fi
+if [ $PGID ]; then
+    groupid=$PGID
+fi
+
+chown -R $userid:$groupid /conf
+chown -R $userid:$groupid /data
+
 darkhttpd /aria2-webui --port 80 &
 darkhttpd /data --port 8080 &
-aria2c --conf-path=/conf/aria2.conf
+su-exec $userid:$groupid aria2c --conf-path=/conf/aria2.conf
